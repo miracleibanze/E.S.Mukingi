@@ -6,6 +6,7 @@ import {
   assemble,
   eyeSlash,
   eyeSvg,
+  fileDownloadSvg,
   lunch,
   parental,
   refectory,
@@ -82,6 +83,13 @@ const NewsPictureHighlight = ({ className }) => {
         >
           <img src={xSvg} alt="close" className="w-12 h-12" />
         </div>
+        <a
+          href={image[imageIndex].url}
+          download
+          className="fixed z-20 bottom-4 right-0 h-16 w-16 flex items-end cursor-pointer justify-start"
+        >
+          <img src={fileDownloadSvg} alt="download" className="w-12 h-12" />
+        </a>
         <div className="fixed z-10 top-0 right-0 h-full w-16 flex items-center justify-start">
           <img
             src={ARightSvg}

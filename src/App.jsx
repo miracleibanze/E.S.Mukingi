@@ -51,7 +51,7 @@ const App = () => {
 
   const [upScrollButton, setUpScrollButton] = useState(false);
 
-  const location = useLocation();
+  const location = useLocation().pathname;
 
   window.onscrollend = () => {
     setUpScrollButton(!upScrollButton);

@@ -20,8 +20,12 @@ const Carousel = () => {
     <div className="w-full h-[780px] max-md:h-[425px]">
       <div
         className={`w-full h-[700px] max-md:h-[400px] bg-center bg-cover duration-500 relative`}
-        style={{ backgroundImage: `url(${slides[slideIndex].url})` }}
+        style={{ backgroundImage: `url(${slides[slideIndex].url.imgBg})` }}
       >
+        <img
+          src={slides[slideIndex].url.img}
+          className="absolute min-h-full min-w-full object-cover object-center"
+        />
         <div className="w-full h-full absolute z-2 group">
           <div
             className="absolute flex items-center pl-8 h-full md:w-32 max-md:max-w-16 bg-gradient-to-l from-n-8/10 to-n-8/90 cursor-pointer"

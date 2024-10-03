@@ -19,7 +19,7 @@ const Header = () => {
 
   const content = (
     <>
-      <div className=" md:hidden flex items-center justify-center h-screen fixed top-0 w-full left-0 right-0 bg-slate-800 transition-all z-[999]">
+      <div className=" md:hidden flex items-center justify-center h-screen fixed top-0 w-full left-0 right-0 bg-slate-800 transition-all z-[999] animate-slide-down">
         <ul className="text-center text-xl p-20 min-w-[300px] w-[90%]">
           {pages.map((page) => (
             <li

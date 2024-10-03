@@ -32,6 +32,10 @@ import {
   refectory,
   S6Graduates,
   person1,
+  schoolAttentionSmall,
+  schoolBoysSmall,
+  classViewSmall,
+  school_gateSmall,
 } from "../assets";
 
 export const pages = [
@@ -95,16 +99,16 @@ export const designerSacials = [
 
 export const slides = [
   {
-    url: schoolAttention,
+    url: { img: schoolAttention, imgBg: schoolAttentionSmall },
   },
   {
-    url: schoolBoys,
+    url: { img: schoolBoys, imgBg: schoolBoysSmall },
   },
   {
-    url: classView,
+    url: { img: classView, imgBg: classViewSmall },
   },
   {
-    url: schoolGate,
+    url: { img: schoolGate, imgBg: school_gateSmall },
   },
 ];
 
