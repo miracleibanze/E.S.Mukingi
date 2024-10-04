@@ -241,7 +241,7 @@ const App = () => {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-900 to-black text-white text-sm sm:text-base max-w-screen overflow-x-hidden">
+    <main className="min-h-screen max-w-full min-w-full overflow-hidden flex flex-col bg-gradient-to-r from-slate-900 to-black text-white text-sm sm:text-base max-w-screen overflow-x-hidden">
       <AppContext.Provider
         value={{
           pages,

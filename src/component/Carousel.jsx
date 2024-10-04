@@ -24,7 +24,9 @@ const Carousel = () => {
       >
         <img
           src={slides[slideIndex].url.img}
-          className="absolute min-h-full min-w-full object-cover object-center"
+          className="absolute min-h-full max-h-full min-w-full object-cover object-center"
+          height={slides[slideIndex].height}
+          width={slides[slideIndex].width}
         />
         <div className="w-full h-full absolute z-2 group">
           <div

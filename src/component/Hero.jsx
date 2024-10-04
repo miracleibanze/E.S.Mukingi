@@ -193,7 +193,7 @@ const Hero = () => {
 
       <Section
         id="we-have"
-        className=" bg-cover h-[700px] bg-center"
+        className=" bg-cover h-[700px] bg-center relative"
         style={{ backgroundImage: `url(${headMaster})` }}
       >
         <div className="container absolute w-full h-full flex flex-col justify-center gap-4 items-center bg-gradient-to-b from-n-6/0 to-n-6/70">

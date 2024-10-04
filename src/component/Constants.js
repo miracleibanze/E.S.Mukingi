@@ -100,15 +100,23 @@ export const designerSacials = [
 export const slides = [
   {
     url: { img: schoolAttention, imgBg: schoolAttentionSmall },
+    height: 6015,
+    width: 3383,
   },
   {
     url: { img: schoolBoys, imgBg: schoolBoysSmall },
+    height: 4970,
+    width: 2796,
   },
   {
     url: { img: classView, imgBg: classViewSmall },
+    height: 691,
+    width: 390,
   },
   {
     url: { img: schoolGate, imgBg: school_gateSmall },
+    height: 800,
+    width: 553,
   },
 ];
 
