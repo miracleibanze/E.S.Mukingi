@@ -93,7 +93,7 @@ export const designerSacials = [
     id: "0",
     name: "LinkedIn",
     iconUrl: linkedInSvg,
-    linkUrl: "https://www.linkedin.com/in/ibanze-miracle-a203b6270",
+    linkUrl: "https://www.linkedin.com/in/ibanze-miracle",
   },
 ];
 

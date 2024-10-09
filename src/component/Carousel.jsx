@@ -34,7 +34,7 @@ const Carousel = () => {
             onClick={prevSlide}
           >
             <img
-              className="h-32 w-8 group-hover:block hidden max-md:block"
+              className="h-32 w-8 sm:group-hover:block hidden max-md:block max-sm:hidden"
               src={ALeftSvg}
             />
           </div>
@@ -51,11 +51,11 @@ const Carousel = () => {
             <h3 className="h3 text-n-8">{pages[pageIndex].name}</h3>
           </div>
           <div
-            className="absolute flex items-center right-0 pr-8 h-full w-32 justify-end  bg-gradient-to-r from-n-8/10 to-n-8/90 cursor-pointer"
+            className="absolute flex items-center right-0 pr-8 h-full md:w-32 justify-end max-md:max-w-16 bg-gradient-to-r from-n-8/10 to-n-8/90 cursor-pointer"
             onClick={nextSlide}
           >
             <img
-              className="w-8 h-32 group-hover:block hidden max-md:block"
+              className="w-8 h-32 sm:group-hover:block hidden max-md:block max-sm:hidden "
               src={ARightSvg}
             />
           </div>
