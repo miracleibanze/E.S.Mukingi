@@ -257,7 +257,7 @@ export const administration = [
     name: "NDAYISABA Edison",
     title: "Director of Studies",
     email: "-----------@gmail.com",
-    tel: "+2507*********",
+    tel: "+250788649329",
     imgUrl: DOS,
   },
   {
