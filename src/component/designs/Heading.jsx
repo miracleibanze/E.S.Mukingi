@@ -39,4 +39,4 @@ const Heading = ({ className, title, title2, span, span2, tag, text }) => {
   );
 };
 
-export default memo(Heading);
+export default Heading;

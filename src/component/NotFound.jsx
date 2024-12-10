@@ -14,4 +14,4 @@ const NotFound = () => {
   );
 };
 
-export default memo(NotFound);
+export default NotFound;

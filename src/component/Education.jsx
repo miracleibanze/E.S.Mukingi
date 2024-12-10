@@ -14,18 +14,22 @@ import Heading from "./designs/Heading";
 import Section from "./designs/Section";
 import Tagline from "./designs/Tagline";
 import EducationFacility from "./EducationFacility";
-import Footer from "./Footer";
 import { memo, useContext, useEffect } from "react";
 import { AppContext } from "../App";
 
 const Education = () => {
+  const context = useContext(AppContext);
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
   const {
     educationPartIndex,
     setEducationPartIndex,
     courses,
     setPageIndex,
     goUp,
-  } = useContext(AppContext);
+  } = context;
 
   const { type } = useParams();
   const navigate = useNavigate();
@@ -176,4 +180,4 @@ const Education = () => {
   );
 };
 
-export default memo(Education);
+export default Education;

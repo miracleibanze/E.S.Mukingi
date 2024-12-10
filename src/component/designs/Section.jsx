@@ -17,4 +17,4 @@ const Section = ({ className, id, light, style, children }) => {
   );
 };
 
-export default memo(Section);
+export default Section;

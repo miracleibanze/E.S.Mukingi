@@ -4,7 +4,13 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 
 const Header = () => {
-  const { setPageIndex, setSlideIndex, pages } = useContext(AppContext);
+  const context = useContext(AppContext);
+
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
+  const { setPageIndex, setSlideIndex, pages } = context;
 
   const [click, setClick] = useState(false);
   const navigate = useNavigate();

@@ -1,9 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ADoubleRightSvg, ALeftSvg, ARightSvg, dot } from "./../assets";
 import { AppContext } from "../App";
 import { useNavigate } from "react-router-dom";
 
 const Carousel = () => {
+  const context = useContext(AppContext);
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
   const {
     pageIndex,
     pages,
@@ -12,9 +17,19 @@ const Carousel = () => {
     nextSlide,
     goToIndex,
     slideIndex,
-  } = useContext(AppContext);
+  } = context;
 
   const navigate = useNavigate();
+
+  // Automatically slide every 2 seconds
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      nextSlide();
+    }, 4000); // 2 seconds interval
+
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(slideInterval);
+  }, [nextSlide]);
 
   return (
     <div className="w-full h-[780px] max-md:h-[425px]">
@@ -67,7 +82,7 @@ const Carousel = () => {
             <img
               src={dot}
               className={`w-4 h-4 max-md:w-3 max-md:h-3 cursor-pointer rounded-full ${
-                slideIndex != itemIndex ? "" : "bg-white"
+                slideIndex !== itemIndex ? "" : "bg-white"
               }`}
               onClick={() => goToIndex(itemIndex)}
             />

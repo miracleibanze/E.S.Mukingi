@@ -8,8 +8,13 @@ import { AppContext } from "../App";
 import { administration, iframes } from "./Constants";
 
 const About = () => {
+  const context = useContext(AppContext);
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
   const { aboutParagraph, Motto_Vission, vission, setPageIndex, goUp } =
-    useContext(AppContext);
+    context;
 
   const navigate = useNavigate();
 

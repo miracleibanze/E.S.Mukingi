@@ -18,4 +18,4 @@ const Button = ({ className, onClick, children, color, blue }) => {
   return renderButton();
 };
 
-export default memo(Button);
+export default Button;

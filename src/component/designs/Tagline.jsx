@@ -15,4 +15,4 @@ const Tagline = ({ className, children }) => {
   );
 };
 
-export default memo(Tagline);
+export default Tagline;

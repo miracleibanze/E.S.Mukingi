@@ -154,4 +154,4 @@ const Contact = () => {
   );
 };
 
-export default memo(Contact);
+export default Contact;

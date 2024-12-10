@@ -168,4 +168,4 @@ const NewsPictureHighlight = ({ className }) => {
   );
 };
 
-export default memo(NewsPictureHighlight);
+export default NewsPictureHighlight;

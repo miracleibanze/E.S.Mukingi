@@ -13,6 +13,12 @@ import { AppContext } from "../App";
 import { designerSacials } from "./Constants";
 
 const Footer = () => {
+  const context = useContext(AppContext);
+
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
   const {
     aboutParagraph,
     courses,
@@ -20,7 +26,7 @@ const Footer = () => {
     pageIndex,
     setPageIndex,
     setSlideIndex,
-  } = useContext(AppContext);
+  } = context;
   const [viewDesigner, setViewDesigner] = useState(false);
 
   return (

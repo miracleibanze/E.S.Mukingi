@@ -557,4 +557,4 @@ const EducationFacility = ({ className }) => {
   );
 };
 
-export default memo(EducationFacility);
+export default EducationFacility;

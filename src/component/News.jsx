@@ -16,7 +16,13 @@ import { memo, useContext, useEffect } from "react";
 import { AppContext } from "../App";
 
 const News = () => {
-  const { newsType, setNewsType } = useContext(AppContext);
+  const context = useContext(AppContext);
+
+  if (!context)
+    return (
+      <h1 className="h-screen flex items-center justify-center">Loading ...</h1>
+    );
+  const { newsType, setNewsType } = context;
   const { type } = useParams();
   const navigate = useNavigate();
 
@@ -165,4 +171,4 @@ const News = () => {
   );
 };
 
-export default memo(News);
+export default News;
